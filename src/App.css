@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+
+}
+
+.header {
+    width: 96%;
+    border-bottom:1px solid rgb(109, 109, 112);
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+}
+
+.header svg {
+    color: rgb(0, 139, 139);
+}
+
+
+.header > svg {
+    font-size: 80px;
+}
+
+.header div{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header div button {
+    background: rgba(27, 161, 161, 0.24);
+    display: flex;
+    border: 1px solid black;
+    height: 50px;
+    padding: 10px;
+    width: 40%;
+    border-radius: 3px;
+    transition: all 0.5s ;
+    justify-content: center;
+    align-items: center;
+}
+.header div button:hover{
+    background: rgba(12, 87, 87, 0.555);
+}
+
+
+
+.place-holder-img{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 400px;
+}
+
+.page-container{
+    width: 90%;
+    left: 5%;
+    position: relative;
+    top: 100px;
+    height: fit-content;
+    gap: 10px;
+    
+}  
+
+.modal-ele {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(211, 211, 211, 0.801);
+    background-blend-mode:saturation;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.category-modal{
+    height: 300px;
+    width: 40%;
+    position: relative;
+    top: 100px;
+    animation: modal 0.5s 0s 1 normal forwards;
+
+}
+
+@keyframes modal{
+   0%{
+    top: 0px;
+    height:00px;
+   }
+   100%{
+    top: 100px;
+    height: 300px;
+   }
+}
+
+.addexpense>button{
+    border: none;
+    background-color: brown;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    right: calc(-100% + 90px);
+    bottom: -60px;
+}
+
+.addexpense>button:hover{
+    background-color: rgb(219, 15, 15);
+}
+.addexpense form{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+    right: -20%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.addexpense form input ,.addexpense form button {
+    
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 3px;
+    border: 1px solid blueviolet;
+    
+}
+.addexpense {
+    position: relative;
+}
+
+.addexpense form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 204, 255);
+    color: rgb(189, 0, 0);
+    font-size: 20px;
+}
+.addexpense h3{
+    position: relative;
+    right: -20%;
+    width: 60%;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+
+.each-category{
+    height:fit-content;
+    width: 90%;
+    border: 1px solid rgba(92, 92, 92, 0.562);
+    border-radius: 3px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(228, 225, 225, 0.719);
+}
+.each-category h1{
+    width: 100%;
+    text-align: center;
+    color: rgb(97, 63, 0);
+}
+.each-category>h3{
+    width: 100%;
+    text-align: center;
+    
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgb(97, 63, 0);
+}
+
+.each-expense {
+    width: 80%;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+.expense-data{
+    display: flex;
+    justify-content: space-between;
+}
+.total-money{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #f70000;
+    background-color: #000000;
+    font-size: 50px;
+    border-radius: 15px;
+    padding: 10px;
+}
+@keyframes delete{
+    100%{
+        transform: scale(0,0);
+    }
+}
